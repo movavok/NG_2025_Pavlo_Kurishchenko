@@ -13,7 +13,7 @@ int main()
     bool isWord = false;
 
     for (int symNumber = 0; symNumber < lineLen; symNumber++){
-        if (tolower(line[symNumber]) >= 'a' && tolower(line[symNumber]) <= 'z'){
+        if ((line[symNumber] >= 'A' && line[symNumber] <= 'Z') || (line[symNumber] >= 'a' && line[symNumber] <= 'z')){
             if (!isWord){
                 isWord = true;
                 wordCount++;
