@@ -1,5 +1,4 @@
 #include <iostream>
-#include <iomanip>
 
 using namespace std;
 
@@ -30,12 +29,12 @@ int main()
         if (!found) nonCount++; // we count all the unspoken symbols (even spaces, commas, etc. As was said in the task)
     }
 
-    double vowPercent = vowCount * 100.0 / lineLen;
-    double nonPercent = nonCount * 100.0 / lineLen;
+    int vowPercent = vowCount * 100 / lineLen;
+    int nonPercent = nonCount * 100 / lineLen;
 
     cout << "The ratio of vowel symbols to all non-vowels is " << vowCount << ":" << nonCount << "\n";
-    cout << fixed << setprecision(2) << "What percentage of the text is occupied by vowels:     " << vowPercent << "%\n";
-    cout << fixed << setprecision(2) << "                                        by non-vowels: " << nonPercent << "%\n";
+    cout << "What percentage of the text is occupied by vowels:     " << vowPercent << "%\n";
+    cout << "                                        by non-vowels: " << nonPercent << "%\n";
 
     return 0;
 }
