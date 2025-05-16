@@ -16,6 +16,7 @@ MainWindow::~MainWindow()
 void MainWindow::changeOperation()
 {
     workNumber = '2';
+    lengthNum = 0;
     QString htmlOper = QString(
                        "<div align='center'>"
                        "<span style='font-weight:bold; font-size:28pt;'>%1</span>"
@@ -30,11 +31,15 @@ void MainWindow::changeNumber()
     if (workNumber == '1' && lengthNum < 5) {
         firstNumber = firstNumber * 10 + number;
         lengthNum++;
+        ui->lcd_firstnum->setStyleSheet("border: 2px solid red;");
+        ui->lcd_secondnum->setStyleSheet("border: none;");
         ui->lcd_firstnum->display(firstNumber);
     }
     else if (workNumber == '2' && lengthNum < 5){
         secondNumber = secondNumber * 10 + number;
         lengthNum++;
+        ui->lcd_secondnum->setStyleSheet("border: 2px solid red;");
+        ui->lcd_firstnum->setStyleSheet("border: none;");
         ui->lcd_secondnum->display(secondNumber);
     }
 }

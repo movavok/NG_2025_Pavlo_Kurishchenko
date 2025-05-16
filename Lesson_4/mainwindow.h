@@ -48,9 +48,9 @@ private:
     Ui::MainWindow *ui;
     char operation = '+';
     char workNumber = '1';
-    int number = 0;
-    int firstNumber = 0;
-    int secondNumber = 0;
+    double number = 0;
+    double firstNumber = 0;
+    double secondNumber = 0;
     short lengthNum = 0;
     double result = 0;
 };
